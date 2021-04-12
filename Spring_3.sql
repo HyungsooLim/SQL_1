@@ -266,8 +266,14 @@ values(notice_seq.nextval, '321', 'w2', 'c2', sysdate);
 commit work;
 
 
+select * from NOTICEFILES;
 
+select * from NOTICE order by num desc;
 
+delete from NOTICEFILES
+where fileNum = 42
+
+select * from NOTICEFILES where fileNum= 42;
 
 
 
