@@ -5,7 +5,7 @@ title varchar2(200),
 writer varchar2(200),
 regdate date,
 hit number,
-contents varchar2(4000)
+contents clob
 );
 
 select * from user_constraints;
@@ -18,7 +18,7 @@ select * from seq;
 drop sequence notice_seq;
 -- 3. insert 3개 실행 ----------------------------------------------
 insert into NOTICE
-values(notice_seq.nextval, 'title2', 'writer2', sysdate, 0, null);
+values(notice_seq.nextval, 'title1', 'writer1', sysdate, 0, null);
 
 -- 4. select 테스트 ------------------------------------------------
 select * from NOTICE;
@@ -274,6 +274,16 @@ delete from NOTICEFILES
 where fileNum = 42
 
 select * from NOTICEFILES where fileNum= 42;
+
+
+select * from NOTICE order by num desc;
+
+drop table NOTICE;
+
+drop table NOTICEFILES;
+
+drop table COMMENTS;
+
 
 
 
