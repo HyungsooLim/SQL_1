@@ -1,15 +1,23 @@
-create table test(
-	num number,
-	name varchar2(50),
-	contents varchar2(100),
-	regDate date
+--coupon =================================================================================================
+create table coupon (
+couponNum varchar2(400) constraint COUPON_CPNUM_PK primary key,
+id varchar2(100) constraint COUPON_ID_FK references member (id) on delete cascade not null,
+disRate number not null,
+disPrice number not null,
+usage varchar2(10) not null
 );
 
-create sequence test_seq;
+--coupon insert
+insert into coupon values ('couponNum1','id1',1,1,'Y');
+insert into coupon values ('couponNum2','id2',2,2,'Y');
+insert into coupon values ('couponNum3','id3',3,3,'Y');
 
-insert into test
-values(test_seq.nextval, 'name2', 'contents2', sysdate);
+select * from COUPON order by couponNum desc;
 
-select * from TEST;
+drop table coupon;
 
 commit work;
+
+update COUPON set usage='N' where couponNum='couponNum1';
+
+select count(couponNum) from COUPON
