@@ -1,4 +1,4 @@
---coupon =================================================================================================
+--COUPON =================================================================================================
 create table coupon (
 couponNum varchar2(400) constraint COUPON_CPNUM_PK primary key,
 id varchar2(100) constraint COUPON_ID_FK references member (id) on delete cascade not null,
@@ -21,3 +21,19 @@ commit work;
 update COUPON set usage='N' where couponNum='couponNum1';
 
 select count(couponNum) from COUPON
+
+--MEMBER =================================================================================================
+
+select * from MEMBER;
+
+insert into MEMBER
+values(member_seq.nextval,'admin','admin','HS','010-6426-0892','admin@gmail.com');
+
+
+
+
+
+
+
+
+
