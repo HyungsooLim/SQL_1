@@ -29,6 +29,8 @@ select * from MEMBER;
 insert into MEMBER
 values(member_seq.nextval,'admin','admin','HS','010-6426-0892','admin@gmail.com');
 
+commit work;
+
 
 
 
