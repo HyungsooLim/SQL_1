@@ -31,6 +31,16 @@ values(member_seq.nextval,'admin','admin','HS','010-6426-0892','admin@gmail.com'
 
 commit work;
 
+select * from XMEMBER;
+
+select * from ADDRESSINFO;
+
+select count(id) from MEMBER;
+
+select * from MEMBER where id like '%3%' order by id desc;
+
+select rowNum, M.* from (select * from MEMBER) M;
+
 
 
 
