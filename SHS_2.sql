@@ -40,7 +40,20 @@ select count(id) from MEMBER;
 select * from MEMBER where id like '%3%' order by id desc;
 
 select rowNum, M.* from (select * from MEMBER) M;
+-----------------------------------------------------
 
+select xId id, xName name, orderPw pw, M.* from XMEMBER
+
+select X.*, M.* from (select rowNum, XMEMBER.* from XMEMBER) X
+full join (select rowNum, MEMBER.* from MEMBER) M
+on X.rowNum = M.rowNum;
+
+
+select rowNum , XMEMBER.* from XMEMBER;
+select rowNum , M.* from MEMBER M;
+
+-- ADDRESSINFO ---------------------------------------
+select * from ADDRESSINFO;
 
 
 
