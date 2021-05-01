@@ -53,11 +53,11 @@ select rowNum , XMEMBER.* from XMEMBER;
 select rowNum , M.* from MEMBER M;
 
 -- ADDRESSINFO ---------------------------------------
-select * from ADDRESSINFO;
+select * from ADDRESSINFO where id='id3' order by addressNum desc;
 
+insert into addressInfo values (addr_seq.nextval,'id3',33,'majorAddr33','minorAddr33','addMessage33', null);
 
-
-
+commit work;
 
 
 
