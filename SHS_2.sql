@@ -71,5 +71,10 @@ where A.orderNum=1;
 
 commit work;
 
+select * from ORDERINFO;
+
+update ORDERINFO set orderProcess='test' where oiNum=3;
+
+commit work;
 
 
