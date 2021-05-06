@@ -59,6 +59,17 @@ insert into addressInfo values (addr_seq.nextval,'id3',33,'majorAddr33','minorAd
 
 commit work;
 
+-- orderInfo------------------------------------------
+select * from ADDRESSINFO where orderNum=1;
+insert into addressInfo values (addr_seq.nextval,1,'id1',2, 'productName2',200,1,'name1','1123-123','Addr1','phone1','email1','addMessage1');
+select count(addressNum) from ADDRESSINFO where orderNum=1;
+
+select P.productName from PRODUCT P
+inner join ADDRESSINFO A
+on P.productNum = A.productNum
+where A.orderNum=1;
+
+commit work;
 
 
 
