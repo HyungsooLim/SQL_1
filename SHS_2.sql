@@ -70,11 +70,23 @@ on P.productNum = A.productNum
 where A.orderNum=1;
 
 commit work;
+select * from addressInfo;
+
+select * from orderInfo where to_char(orderDate, 'YYMMDD') = '210506';
+
+select sum(price) from addressInfo where orderNum in (
+	select orderNum from ORDERINFO where to_char(orderDate, 'YYMMDD') = '210507'
+);
 
 select * from ORDERINFO;
+
 
 update ORDERINFO set orderProcess='test' where oiNum=3;
 
 commit work;
+
+update orderInfo set shippingNum=123456 where oiNum=1;
+
+insert into addressInfo values (addr_seq.nextval,3,'id3',3, 'prodeuctName3',5000,1,'name3','323-332','Addr3','phone3','email3','addMessage3');
 
 
