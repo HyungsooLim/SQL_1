@@ -89,4 +89,11 @@ update orderInfo set shippingNum=123456 where oiNum=1;
 
 insert into addressInfo values (addr_seq.nextval,3,'id3',3, 'prodeuctName3',5000,1,'name3','323-332','Addr3','phone3','email3','addMessage3');
 
+select * from member;
+
+select * from SEQ;
+
+insert into MEMBER
+values(member_seq.nextval, 'admin', 'admin', 'admin', '01099999999', 'admin@gmail.com');
+
 
